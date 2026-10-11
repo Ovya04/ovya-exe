@@ -1,0 +1,13 @@
+.home { display: grid; gap: 1.5rem; }
+.top { display: grid; gap: 1.25rem; align-items: center; }
+
+/* Phones: hero + launcher grid. No room scene. */
+.scene { display: none; }
+
+@media (min-width: 768px) {
+  .scene { display: block; }
+  .launcher { display: none; }
+}
+@media (min-width: 1000px) {
+  .top { grid-template-columns: 380px minmax(0, 1fr); gap: 1.5rem; }
+}

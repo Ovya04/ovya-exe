@@ -1,0 +1,4 @@
+/* src/components/resume/ResumeSelector.module.css */
+.wrap { max-width: 680px; margin-inline: auto; }
+.hint { margin: 0 0 1.1rem; color: var(--text-muted); }
+.list { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }

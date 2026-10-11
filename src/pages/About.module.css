@@ -1,0 +1,25 @@
+/* src/pages/About.module.css */
+.page { display: grid; gap: 1.5rem; }
+.layout { display: grid; gap: 1.25rem; align-items: start; }
+@media (min-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr) 260px; gap: 1.5rem; }
+}
+
+.heading { margin: 0 0 0.9rem; font-size: clamp(1.5rem, 4vw, 2rem); }
+.paragraph { max-width: 65ch; margin: 0 0 0.9rem; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1.1rem 0; padding: 0; list-style: none; }
+.chips li {
+  padding: 0 0.6rem;
+  font-family: var(--font-pixel);
+  font-size: 0.85rem;
+  color: var(--on-pastel);
+  background: var(--blue);
+  border: 2px solid var(--outline);
+}
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+.profile { text-align: center; }
+.avatar { width: 120px; margin: 0 auto 0.75rem; }
+.name { margin: 0; font-family: var(--font-pixel); font-size: 1.25rem; font-weight: 600; }
+.roles { display: grid; gap: 0.15rem; margin: 0.5rem 0 0; padding: 0; list-style: none; color: var(--text-muted); }

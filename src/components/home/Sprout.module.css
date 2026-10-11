@@ -1,0 +1,20 @@
+/* src/components/home/Sprout.module.css */
+.root { position: absolute; z-index: 2; left: 73%; bottom: 66%; width: 6%; }
+.button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.12s;
+}
+.button:hover, .button:focus-visible { transform: translateY(-3px); }
+.button:active { transform: translateY(1px) scale(0.95); }
+.sprite { display: block; width: 100%; height: auto; }
+
+.bloomed .sprite { animation: sway 2.4s ease-in-out infinite; transform-origin: 50% 100%; }
+@keyframes sway {
+  0%, 100% { rotate: -3deg; }
+  50%      { rotate: 3deg; }
+}

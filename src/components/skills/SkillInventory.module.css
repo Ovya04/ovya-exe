@@ -1,0 +1,30 @@
+/* src/components/skills/SkillInventory.module.css */
+.layout { display: grid; gap: 1.25rem; align-items: start; }
+
+/* Phones: the inspect panel sticks to the top so it stays visible while you pick items */
+.panel {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 5;
+  order: -1;
+  max-height: 36vh; max-height: 36dvh;
+  overflow: auto;
+}
+@media (min-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr) 320px; gap: 1.5rem; }
+  .panel { order: 0; top: 1rem; max-height: none; overflow: visible; }
+}
+
+.hint { margin: 0 0 1.25rem; color: var(--text-muted); }
+.category { margin-bottom: 1.5rem; }
+.category:last-child { margin-bottom: 0; }
+.title { margin: 0 0 0.7rem; font-size: 1.15rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

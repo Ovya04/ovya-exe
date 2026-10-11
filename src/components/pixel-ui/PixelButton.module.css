@@ -1,0 +1,29 @@
+/* src/components/pixel-ui/PixelButton.module.css */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-pixel);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--on-pastel);
+  text-decoration: none;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0 var(--outline);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, background-color 0.15s;
+}
+.md { min-height: 44px; padding: 0.5rem 1rem; font-size: 1rem; }
+.sm { min-height: 36px; padding: 0.25rem 0.7rem; font-size: 0.85rem; }
+
+.primary   { background: var(--pink); }
+.secondary { background: var(--blue); }
+.accent    { background: var(--yellow); }
+.ghost     { background: var(--surface); color: var(--text); }
+
+.button:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 3px 5px 0 var(--outline); }
+.button:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--outline); }
+.button:disabled { opacity: 0.55; cursor: not-allowed; }
+.icon { display: inline-flex; }

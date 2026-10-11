@@ -1,0 +1,27 @@
+/* src/components/achievements/AchievementCard.module.css */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.9rem;
+  color: var(--text);
+  text-align: center;
+  background: none;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.12s;
+}
+.card:hover, .card:focus-visible { transform: translateY(-4px); }
+.card:hover .sprite { animation: wiggle 0.4s ease-in-out; }
+
+.sprite { width: 72px; height: auto; margin-bottom: 0.25rem; }
+.title { font-family: var(--font-pixel); font-weight: 600; font-size: 1.05rem; line-height: 1.2; }
+.subtitle { font-size: 0.9rem; color: var(--text-muted); }
+
+@keyframes wiggle {
+  25% { rotate: -4deg; }
+  75% { rotate: 4deg; }
+}

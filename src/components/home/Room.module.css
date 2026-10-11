@@ -1,0 +1,110 @@
+/* src/components/home/Room.module.css */
+.frame { width: 100%; max-width: 780px; margin-inline: auto; }
+
+.room {
+  --wood: color-mix(in srgb, var(--yellow) 65%, var(--bg));
+  position: relative;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+.scenery { position: absolute; inset: 0; }
+.scenery > * { position: absolute; }
+
+.wall {
+  inset: 0 0 36% 0;
+  background: repeating-linear-gradient(90deg, var(--surface-2) 0 28px, var(--surface) 28px 56px);
+  border-bottom: var(--border);
+}
+.floor {
+  inset: 64% 0 0 0;
+  background-color: color-mix(in srgb, var(--lavender) 55%, var(--bg));
+  background-image: repeating-linear-gradient(90deg, transparent 0 62px, rgba(68, 58, 82, 0.16) 62px 64px);
+}
+
+.stars { inset: 0 0 36% 0; opacity: var(--stars-opacity); transition: opacity 0.3s; }
+.stars i {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--yellow);
+  animation: twinkle 3s steps(1) infinite;
+}
+
+.window {
+  left: 6%; top: 9%; width: 26%; height: 34%;
+  overflow: hidden;
+  background: linear-gradient(#cbe4f6, #fff7fb);
+  border: var(--border);
+  box-shadow: 3px 3px 0 var(--outline);
+}
+.window::before, .window::after { content: ""; position: absolute; background: var(--outline); }
+.window::before { left: 50%; top: 0; bottom: 0; width: 3px; }
+.window::after { top: 50%; left: 0; right: 0; height: 3px; }
+:global([data-theme="dream"]) .window { background: linear-gradient(#2a2347, #5b4b8a); }
+.orb {
+  position: absolute; right: 14%; top: 12%; width: 14%; aspect-ratio: 1;
+  background: var(--yellow); border: 2px solid var(--outline);
+}
+:global([data-theme="dream"]) .orb { background: #f1e9fb; }
+.cloud { position: absolute; left: 10%; top: 55%; width: 45%; height: auto; opacity: 0.9; }
+:global([data-theme="dream"]) .cloud { opacity: 0.3; }
+
+.poster {
+  position: absolute;
+  z-index: 1;
+  left: 38%; top: 12%; width: 12%; height: 18%;
+  display: grid; place-items: center;
+  padding: 0;
+  cursor: pointer;
+  background: var(--pink);
+  border: var(--border);
+  box-shadow: 2px 2px 0 var(--outline);
+  transition: transform 0.12s;
+}
+.poster:hover, .poster:focus-visible { transform: translateY(-3px) rotate(-2deg); }
+
+.shelf {
+  left: 56%; top: 34%; width: 40%; height: 2.2%;
+  background: var(--wood);
+  border: var(--border);
+}
+
+.rug {
+  left: 16%; top: 82%; width: 68%; height: 14%;
+  background-color: var(--pink);
+  background-image: repeating-linear-gradient(90deg, transparent 0 14px, rgba(255, 255, 255, 0.35) 14px 28px);
+  border: var(--border);
+  border-radius: var(--radius);
+  opacity: 0.8;
+}
+
+.deskTop {
+  left: 22%; top: 62%; width: 58%; height: 6%;
+  background: var(--wood);
+  border: var(--border);
+}
+.deskLegLeft, .deskLegRight {
+  top: 68%; height: 24%; width: 4%;
+  background: var(--wood);
+  border: var(--border);
+  border-top: 0;
+}
+.deskLegLeft { left: 24%; }
+.deskLegRight { left: 74%; }
+
+.avatar {
+  position: absolute;
+  z-index: 2;
+  left: 8%;
+  bottom: 5%;
+  width: 12%;
+  transition: transform 2.2s steps(14, end); /* chunky pixel steps; matches WALK_MS */
+}
+
+@keyframes twinkle {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.25; }
+  100% { opacity: 1; }
+}

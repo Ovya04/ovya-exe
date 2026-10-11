@@ -1,0 +1,2 @@
+.page { display: grid; gap: 1.5rem; }
+.intro { margin: 0 0 1.25rem; color: var(--text-muted); }

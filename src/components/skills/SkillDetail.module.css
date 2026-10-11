@@ -1,0 +1,20 @@
+/* src/components/skills/SkillDetail.module.css */
+.name { margin: 0; font-family: var(--font-pixel); font-size: 1.6rem; font-weight: 600; text-transform: uppercase; overflow-wrap: anywhere; }
+.category { margin: 0 0 0.9rem; color: var(--text-muted); }
+.heading { margin: 0 0 0.4rem; font-size: 1rem; }
+.empty { margin: 0; color: var(--text-muted); }
+
+.list { display: grid; gap: 0.3rem; margin: 0; padding: 0; list-style: none; }
+.list li { display: flex; align-items: baseline; gap: 0.55rem; }
+.list li::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border: 2px solid var(--outline);
+}
+.heading:not(:first-of-type) { margin-top: 1rem; }
+.meta { display: block; font-size: 0.85rem; color: var(--text-muted); }
+.list a { color: var(--text); font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.list a:hover { background: var(--yellow); color: var(--on-pastel); }

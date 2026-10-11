@@ -1,0 +1,22 @@
+/* src/components/pixel-ui/Toggle.module.css (shared) */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0 0.55rem;
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 2px 2px 0 var(--outline);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.toggle:hover { transform: translateY(-2px); box-shadow: 2px 4px 0 var(--outline); }
+.toggle:active { transform: translate(2px, 2px); box-shadow: none; }

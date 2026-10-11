@@ -1,0 +1,27 @@
+/* src/components/avatar/PoseBanner.module.css */
+.banner { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 1rem; }
+.avatar { flex: none; width: 52px; margin-right: 0.3rem; } /* the raised trophy sticks out to the right */
+
+.bubble {
+  position: relative;
+  margin: 0 0 0.6rem;
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0 var(--outline);
+}
+.bubble::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  bottom: 10px;
+  width: 12px;
+  height: 12px;
+  background: var(--surface);
+  border-left: var(--border);
+  border-bottom: var(--border);
+  transform: rotate(45deg);
+}

@@ -1,0 +1,42 @@
+/* src/components/projects/ProjectCard.module.css */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hard);
+  transition: transform 0.12s;
+}
+.card:hover, .card:focus-within { transform: translateY(-3px); }
+
+.content { display: flex; flex-direction: column; flex: 1; gap: 0.6rem; padding: 0.9rem 1rem 1rem; }
+
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; font-family: var(--font-pixel); font-size: 0.8rem; }
+.chip, .status, .featured {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.5rem;
+  color: var(--on-pastel);
+  border: 2px solid var(--outline);
+}
+.dev { background: var(--blue); }
+.ai { background: var(--lavender); }
+.status { background: var(--mint); }
+.featured { background: var(--yellow); }
+.year { color: var(--text-muted); }
+
+.title { margin: 0; font-size: 1.25rem; }
+.summary {
+  margin: 0;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 0.4rem; }

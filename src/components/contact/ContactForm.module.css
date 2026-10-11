@@ -1,0 +1,42 @@
+/* src/components/contact/ContactForm.module.css */
+.form { display: grid; gap: 1rem; }
+.field { display: grid; gap: 0.3rem; }
+.label { font-family: var(--font-pixel); font-weight: 600; }
+
+.control {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: inset 2px 2px 0 rgba(68, 58, 82, 0.12);
+}
+textarea.control { resize: vertical; min-height: 140px; }
+.control[aria-invalid="true"] { box-shadow: 3px 3px 0 var(--pink); }
+
+.counter { justify-self: end; font-size: 0.8rem; color: var(--text-muted); }
+.error {
+  justify-self: start;
+  margin: 0;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--on-pastel);
+  background: var(--pink);
+  border: 2px solid var(--outline);
+}
+
+.footer { display: flex; }
+.note {
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  background: var(--surface-2);
+  border: 2px dashed var(--outline);
+  border-radius: var(--radius);
+}
+.note a { font-weight: 700; }
+
+.sent { display: grid; justify-items: center; gap: 0.5rem; text-align: center; }
+.sentTitle { margin: 0; font-family: var(--font-pixel); font-size: 1.8rem; font-weight: 600; }

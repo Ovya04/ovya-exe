@@ -1,0 +1,15 @@
+/* src/components/projects/CaseStudySection.module.css */
+.section { padding-block: 1.25rem; border-top: 2px dashed var(--outline); }
+.section:first-child { padding-top: 0; border-top: 0; }
+.section:last-child { padding-bottom: 0; }
+
+.heading { margin: 0 0 0.8rem; font-size: 1.35rem; }
+.num {
+  padding: 0 0.35rem;
+  color: var(--on-pastel);
+  background: var(--yellow);
+  border: 2px solid var(--outline);
+}
+
+.body p { max-width: 65ch; margin: 0 0 0.85rem; }
+.body > :last-child { margin-bottom: 0; }

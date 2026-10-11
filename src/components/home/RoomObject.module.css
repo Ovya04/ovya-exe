@@ -1,0 +1,37 @@
+/* src/components/home/RoomObject.module.css */
+.root { position: absolute; z-index: 2; }
+.link {
+  position: relative;
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.12s;
+}
+.link:hover, .link:focus-visible { transform: translateY(-4px); z-index: 3; }
+.link:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+
+.sprite { display: block; width: 100%; height: auto; }
+.link:hover .sprite { animation: wiggle 0.4s ease-in-out; }
+
+.tag {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  padding: 0 0.4rem;
+  white-space: nowrap;
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 2px solid var(--outline);
+  transform: translateX(-50%);
+}
+.hint { display: none; }
+.link:hover .tag, .link:focus-visible .tag { color: var(--on-pastel); background: var(--yellow); }
+.link:hover .name, .link:focus-visible .name { display: none; }
+.link:hover .hint, .link:focus-visible .hint { display: inline; }
+
+@keyframes wiggle {
+  25% { rotate: -3deg; }
+  75% { rotate: 3deg; }
+}

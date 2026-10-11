@@ -1,0 +1,13 @@
+/* src/components/projects/TechTags.module.css */
+.list { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0; padding: 0; list-style: none; }
+.tag {
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 2px solid var(--outline);
+  border-radius: var(--radius);
+}
+.more { background: transparent; border-style: dashed; }

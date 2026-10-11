@@ -1,0 +1,65 @@
+/* src/components/pixel-ui/PixelWindow.module.css */
+.window {
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hard);
+  overflow: hidden;
+}
+.lavender { --window-bar: linear-gradient(90deg, var(--lavender), var(--pink)); }
+.pink     { --window-bar: linear-gradient(90deg, var(--pink), var(--yellow)); }
+.blue     { --window-bar: linear-gradient(90deg, var(--blue), var(--lavender)); }
+.mint     { --window-bar: linear-gradient(90deg, var(--mint), var(--blue)); }
+.yellow   { --window-bar: linear-gradient(90deg, var(--yellow), var(--pink)); }
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem 0.35rem 0.75rem;
+  background: var(--window-bar);
+  color: var(--on-pastel);
+  border-bottom: var(--border);
+  font-family: var(--font-pixel);
+}
+.icon { display: inline-flex; }
+.title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dots { display: flex; gap: 4px; }
+.dots i {
+  width: 10px;
+  height: 10px;
+  background: var(--surface);
+  border: 2px solid var(--outline);
+}
+.close {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  color: var(--on-pastel);
+  background: var(--pink);
+  border: var(--border);
+  box-shadow: 2px 2px 0 var(--outline);
+  cursor: pointer;
+}
+.close:hover { background: var(--yellow); }
+.close:active { transform: translate(2px, 2px); box-shadow: none; }
+
+.body {
+  padding: 1rem 1.1rem;
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.3),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.06);
+}
+.flush { padding: 0; box-shadow: none; }

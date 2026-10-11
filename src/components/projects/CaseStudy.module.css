@@ -1,0 +1,78 @@
+/* src/components/projects/CaseStudy.module.css */
+.layout { display: grid; gap: 1.25rem; }
+.aside { display: grid; gap: 1rem; align-content: start; }
+.content { min-width: 0; }
+
+@media (min-width: 1000px) {
+  .layout { grid-template-columns: 340px minmax(0, 1fr); align-items: start; gap: 1.5rem; }
+  .aside { position: sticky; top: 1rem; }
+}
+
+.todo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--surface);
+  border: 2px dashed var(--outline);
+  border-radius: var(--radius);
+}
+.todoBadge {
+  flex: none;
+  padding: 0 0.4rem;
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: var(--on-pastel);
+  background: var(--yellow);
+  border: 2px solid var(--outline);
+}
+
+.subheading { margin: 1.1rem 0 0.5rem; font-size: 1.05rem; }
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 0.4rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list li { display: flex; align-items: baseline; gap: 0.6rem; }
+.list li::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border: 2px solid var(--outline);
+}
+
+.facts { display: grid; gap: 0.3rem; margin: 1.1rem 0 0; }
+.fact { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; }
+.fact dt { min-width: 7rem; font-family: var(--font-pixel); color: var(--text-muted); }
+.fact dd { margin: 0; }
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.metrics:first-child { margin-top: 0; }
+.metric {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem;
+  background: var(--surface-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0 var(--outline);
+}
+.metricValue { font-family: var(--font-pixel); font-size: 1.5rem; font-weight: 600; }
+.metricLabel { font-size: 0.9rem; color: var(--text-muted); }
+
+.pager { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+.next { margin-left: auto; flex-direction: row-reverse; }

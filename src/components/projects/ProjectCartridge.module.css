@@ -1,0 +1,42 @@
+/* src/components/projects/ProjectCartridge.module.css */
+.cartridge {
+  --cart: var(--blue);
+  padding: 0.9rem 0.9rem 0;
+  overflow: hidden;
+  color: var(--on-pastel);
+  background: var(--cart);
+  border: var(--border);
+  border-radius: 12px 12px 4px 4px;
+  box-shadow: var(--shadow-hard);
+}
+.ai { --cart: var(--lavender); }
+
+.grip { display: grid; gap: 4px; width: 56px; margin: 0 auto 0.8rem; }
+.grip i { height: 4px; background: var(--on-pastel); opacity: 0.45; }
+
+.label {
+  padding: 1rem;
+  color: var(--text);
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.3);
+}
+.kicker { margin: 0 0 0.35rem; font-family: var(--font-pixel); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--text-muted); }
+.title { margin: 0; font-size: clamp(1.6rem, 5vw, 2.1rem); text-transform: uppercase; overflow-wrap: anywhere; }
+.subtitle { margin: 0.25rem 0 0; color: var(--text-muted); }
+
+.specs { margin: 1rem 0 0; padding-top: 0.8rem; border-top: 2px dashed var(--outline); }
+.row { display: flex; gap: 0.6rem; font-family: var(--font-pixel); text-transform: uppercase; }
+.row dt { color: var(--text-muted); }
+.row dd { margin: 0; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+
+.pins {
+  height: 18px;
+  margin: 0.9rem -0.9rem 0;
+  background-color: var(--surface-2);
+  background-image: repeating-linear-gradient(90deg, var(--outline) 0 4px, transparent 4px 10px);
+  border-top: var(--border);
+}

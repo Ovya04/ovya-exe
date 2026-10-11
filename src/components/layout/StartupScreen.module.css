@@ -1,0 +1,25 @@
+/* src/components/layout/StartupScreen.module.css */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: var(--bg);
+}
+.window { width: min(100%, 420px); }
+.text { margin: 0 0 1rem; font-family: var(--font-pixel); font-size: 1.1rem; }
+.track {
+  height: 24px;
+  padding: 3px;
+  background: var(--surface);
+  border: var(--border);
+}
+.fill {
+  height: 100%;
+  background: repeating-linear-gradient(90deg, var(--accent) 0 10px, transparent 10px 13px);
+  transition: width 0.05s linear;
+}
+.footer { display: flex; align-items: center; justify-content: space-between; margin-top: 0.9rem; }
+.percent { font-family: var(--font-pixel); }

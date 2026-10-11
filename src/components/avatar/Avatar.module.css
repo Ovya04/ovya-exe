@@ -1,0 +1,71 @@
+/* src/components/avatar/Avatar.module.css */
+.button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible; /* the waving arm leaves the viewBox */
+  animation: bob 2.6s infinite;
+}
+
+/* Keeps dark hair readable on the dark Dream-mode room */
+:global([data-theme="dream"]) .svg {
+  filter: drop-shadow(1px 0 0 #cbb8ef) drop-shadow(-1px 0 0 #cbb8ef)
+    drop-shadow(0 1px 0 #cbb8ef) drop-shadow(0 -1px 0 #cbb8ef);
+}
+
+.eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 5s infinite;
+}
+.arm {
+  transform-box: view-box;
+  transform-origin: 11.5px 11.2px; /* shoulder */
+}
+.wave { animation: wave 1.6s ease-in-out 1; }
+
+@keyframes bob {
+  0%   { transform: none; }
+  50%  { transform: translateY(-3%); }
+  100% { transform: none; }
+}
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95%           { transform: scaleY(0.15); }
+}
+@keyframes wave {
+  0%   { transform: rotate(0); }
+  15%  { transform: rotate(-140deg); }
+  30%  { transform: rotate(-165deg); }
+  45%  { transform: rotate(-140deg); }
+  60%  { transform: rotate(-165deg); }
+  75%  { transform: rotate(-140deg); }
+  100% { transform: rotate(0); }
+}
+.flipped { transform: scaleX(-1); }
+
+/* Quick two-frame step while walking (overrides the idle bob) */
+.walking .svg { animation: walk 0.4s steps(1) infinite; }
+@keyframes walk {
+  0%   { transform: none; }
+  50%  { transform: translateY(-6%); }
+  100% { transform: none; }
+}
+
+/* Occasional glance left and right, one pixel at a time */
+.eyes { animation: look 11s steps(1) infinite; }
+@keyframes look {
+  0%, 40%   { transform: none; }
+  45%, 55%  { transform: translateX(1px); }
+  60%, 75%  { transform: none; }
+  80%, 90%  { transform: translateX(-1px); }
+  95%, 100% { transform: none; }
+}

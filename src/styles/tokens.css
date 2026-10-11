@@ -1,0 +1,55 @@
+:root,
+[data-theme="day"] {
+   --bg: #f3e1f4;
+   --bg-grid: rgba(68, 58, 82, 0.08);
+    --bg-glow-a: #fbd0e3;
+  --bg-glow-b: #c9e3f7;
+  --surface: #ffffff;
+  --surface-2: #f7f0ff;
+  --lavender: #dcccf8;
+  --pink: #f6c8dc;
+  --blue: #cbe4f6;
+  --mint: #d8f0df;
+  --yellow: #ffe8a3;
+  --text: #443a52;
+    --text-muted: #5f5470;
+  --outline: #443a52;
+  --accent: #b78fe8;
+  --titlebar: linear-gradient(90deg, #dcccf8, #f6c8dc);
+  --on-pastel: #443a52;
+  --shadow-hard: 4px 4px 0 var(--outline);
+  --focus: #7a4fd0;
+  --stars-opacity: 0;
+  
+}
+
+[data-theme="dream"] {
+  --bg: #2e2740;
+   --bg-glow-a: #fbd0e3;
+  --bg-glow-b: #c9e3f7;
+  --surface: #3d3354;
+  --surface-2: #483d63;
+  --lavender: #a99be0;
+  --pink: #e3a9c4;
+  --blue: #94bddc;
+  --mint: #a4d3b5;
+  --yellow: #efd58c;
+  --text: #f1e9fb;
+  --text-muted: #c4b8d9;
+  --outline: #cbb8ef;
+  --accent: #e0a8cf;
+  --on-pastel: #2e2740; /* text color to use ON any pastel fill */
+  --shadow-hard: 4px 4px 0 #1d1829;
+  --focus: #ffd6ec;
+  --stars-opacity: 1;
+}
+
+:root {
+  --font-pixel: "Pixelify Sans", "Courier New", monospace;
+  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --border: 2px solid var(--outline);
+  --taskbar-h: 52px;
+  --bottomnav-h: 60px;
+  --radius: 4px; /* intentionally small: pixel-ish, not pill-shaped */
+  --space: 1rem;
+}

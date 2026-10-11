@@ -1,0 +1,18 @@
+/* src/components/pixel-ui/DialogWindow.module.css */
+.dialog {
+  width: min(92vw, 520px);
+  max-height: 85vh;
+  max-height: 85dvh;
+  padding: 0 6px 6px 0; /* room for the hard shadow */
+  overflow: auto;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+}
+.dialog::backdrop { background: rgba(46, 39, 64, 0.55); }
+.dialog[open] { animation: pop 0.18s ease-out; }
+
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.96) translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}

@@ -1,0 +1,43 @@
+/* src/components/pixel-ui/DesktopIcon.module.css */
+.icon {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  font-family: var(--font-pixel);
+  color: var(--text);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.tile {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  color: var(--on-pastel);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0 var(--outline);
+  transition: transform 0.12s;
+}
+.lavender { background: var(--lavender); }
+.pink     { background: var(--pink); }
+.blue     { background: var(--blue); }
+.mint     { background: var(--mint); }
+.yellow   { background: var(--yellow); }
+
+.label { padding: 0 0.35rem; font-size: 0.85rem; }
+.icon:hover .tile,
+.icon:focus-visible .tile { transform: translateY(-4px); }
+.icon:hover .tile { animation: wiggle 0.4s ease-in-out; }
+.icon:hover .label,
+.icon:focus-visible .label { color: var(--on-pastel); background: var(--yellow); }
+
+@keyframes wiggle {
+  25% { rotate: -4deg; }
+  75% { rotate: 4deg; }
+}

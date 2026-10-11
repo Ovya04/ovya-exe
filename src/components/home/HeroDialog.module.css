@@ -1,0 +1,44 @@
+/* src/components/home/HeroDialog.module.css */
+.avatarMobile { float: right; width: 72px; margin: 0 0 0.5rem 0.75rem; }
+@media (min-width: 768px) { .avatarMobile { display: none; } }
+
+.heading {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+}
+.roles {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+}
+.roles li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.6rem;
+  background: var(--accent);
+  border: 2px solid var(--outline);
+}
+.intro { clear: both; margin: 0 0 1.25rem; color: var(--text-muted); }
+.caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  margin-left: 0.3em;
+  vertical-align: text-bottom;
+  background: var(--accent);
+  animation: caret 1s steps(1) infinite;
+}
+.actions { margin-bottom: 0.9rem; }
+.links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+@keyframes caret {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}

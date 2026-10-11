@@ -1,0 +1,15 @@
+/* src/components/about/BeyondCode.module.css */
+.list { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--surface-2);
+  border: 2px solid var(--outline);
+  border-radius: var(--radius);
+}
+.icon { display: grid; place-items: center; width: 30px; height: 30px; background: var(--mint); border: 2px solid var(--outline); }
+.sprite { width: 18px; height: 18px; }

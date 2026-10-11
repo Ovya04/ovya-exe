@@ -1,0 +1,24 @@
+/* src/components/pixel-ui/PixelTooltip.module.css */
+.wrap { position: relative; display: inline-flex; }
+.tip {
+  position: absolute;
+  left: 50%;
+  z-index: 60;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: var(--on-pastel);
+  background: var(--yellow);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 2px 2px 0 var(--outline);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  transition: opacity 0.12s, transform 0.12s;
+}
+.top { bottom: calc(100% + 8px); }
+.bottom { top: calc(100% + 8px); }
+.wrap:hover .tip,
+.wrap:focus-within .tip { opacity: 1; transform: translate(-50%, 0); }

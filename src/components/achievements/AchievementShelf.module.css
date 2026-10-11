@@ -1,0 +1,51 @@
+/* src/components/achievements/AchievementShelf.module.css */
+.intro { margin: 0 0 1.25rem; color: var(--text-muted); }
+
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+  gap: 1.75rem 1.25rem;
+  margin: 0;
+  padding: 1.25rem 1rem 1.5rem;
+  list-style: none;
+  background: repeating-linear-gradient(90deg, var(--surface-2) 0 28px, var(--surface) 28px 56px);
+  border: var(--border);
+}
+
+/* Each trophy sits on its own wooden plank */
+.slot { position: relative; padding-bottom: 14px; }
+.slot::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  bottom: 0;
+  left: -8px;
+  height: 14px;
+  background: color-mix(in srgb, var(--yellow) 65%, var(--bg));
+  border: var(--border);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.unlock { display: grid; justify-items: center; gap: 0.5rem; text-align: center; }
+.banner {
+  margin: 0;
+  padding: 0.2rem 0.8rem;
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--on-pastel);
+  background: var(--yellow);
+  border: var(--border);
+}
+.bigSprite { width: 96px; height: auto; margin-block: 0.5rem; }
+.name { margin: 0; font-size: 1.5rem; }
+.sub { margin: 0; font-family: var(--font-pixel); color: var(--text-muted); }
+.desc { max-width: 40ch; margin: 0.25rem 0 0.75rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .bigSprite { animation: pop 0.5s steps(4) 1; }
+}
+@keyframes pop {
+  0%   { transform: scale(0.6); }
+  100% { transform: scale(1); }
+}

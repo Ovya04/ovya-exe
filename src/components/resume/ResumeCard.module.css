@@ -1,0 +1,33 @@
+/* src/components/resume/ResumeCard.module.css */
+.card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+  padding: 1rem;
+  background: var(--surface-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0 var(--outline);
+}
+.icon {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  color: var(--on-pastel);
+  background: var(--blue);
+  border: var(--border);
+  box-shadow: 2px 2px 0 var(--outline);
+}
+.title { margin: 0; font-size: 1.2rem; }
+.desc { margin: 0.2rem 0 0; color: var(--text-muted); }
+.missing {
+  margin: 0.5rem 0 0;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.9rem;
+  background: var(--surface);
+  border: 2px dashed var(--outline);
+}
+.missing code { font-family: var(--font-pixel); overflow-wrap: anywhere; }
+.actions { grid-column: 2; display: flex; flex-wrap: wrap; gap: 0.5rem; }

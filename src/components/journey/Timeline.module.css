@@ -1,0 +1,54 @@
+/* src/components/journey/Timeline.module.css */
+.list { position: relative; display: grid; gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
+.list::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 18px;
+  border-left: 3px dashed var(--outline);
+}
+
+.item { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 0.9rem; }
+
+.marker {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--on-pastel);
+  background: var(--mint);
+  border: var(--border);
+  box-shadow: 2px 2px 0 var(--outline);
+}
+.edu .marker { background: var(--lavender); }
+
+.card { padding: 0.85rem 1rem; background: var(--surface-2); border: var(--border); border-radius: var(--radius); }
+.edu .card { background: var(--surface); box-shadow: var(--shadow-hard); }
+
+.kind { margin: 0 0 0.2rem; font-family: var(--font-pixel); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+.title { margin: 0; font-size: 1.2rem; }
+.org { margin: 0.25rem 0 0; font-weight: 700; }
+.period {
+  display: inline-block;
+  margin: 0.4rem 0 0;
+  padding: 0 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: var(--on-pastel);
+  background: var(--yellow);
+  border: 2px solid var(--outline);
+}
+.summary { margin: 0.6rem 0 0; color: var(--text-muted); }
+
+.details { display: grid; gap: 0.2rem; margin: 0.6rem 0 0; padding: 0; list-style: none; }
+.details li { display: flex; align-items: baseline; gap: 0.55rem; }
+.details li::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border: 2px solid var(--outline);
+}
