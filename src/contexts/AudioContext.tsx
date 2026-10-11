@@ -64,7 +64,7 @@ function playNotes(ctx: AudioContext, notes: Note[]) {
 }
 
 export function AudioProvider({ children }: { children: ReactNode }) {
-  const [muted, setMuted] = useLocalStorage<boolean>("ovya:muted", true, isBoolean);
+  const [muted, setMuted] = useLocalStorage<boolean>("ovya:muted", false, isBoolean);
   const ctxRef = useRef<AudioContext | null>(null);
   const lastPlayed = useRef<Partial<Record<SfxName, number>>>({});
 
